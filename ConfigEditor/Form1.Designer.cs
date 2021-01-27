@@ -43,7 +43,7 @@ namespace ConfigEditor
             this.label1 = new System.Windows.Forms.Label();
             this.findTextBox = new System.Windows.Forms.TextBox();
             this.findButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.variableDataGridView = new System.Windows.Forms.DataGridView();
             this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@ namespace ConfigEditor
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variableDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -88,7 +88,7 @@ namespace ConfigEditor
             this.saveAsToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 44);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
@@ -116,7 +116,7 @@ namespace ConfigEditor
             // 
             this.aboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 44);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 36);
             this.aboutToolStripMenuItem.Text = "About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -125,7 +125,7 @@ namespace ConfigEditor
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.variableDataGridView, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -182,20 +182,25 @@ namespace ConfigEditor
             this.findButton.Text = "Find";
             this.findButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // variableDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.variableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.variableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.typeColumn,
             this.nameColumn,
             this.valueColumn});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(968, 783);
-            this.dataGridView1.TabIndex = 1;
+            this.variableDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.variableDataGridView.Location = new System.Drawing.Point(3, 103);
+            this.variableDataGridView.MultiSelect = false;
+            this.variableDataGridView.Name = "variableDataGridView";
+            this.variableDataGridView.RowHeadersWidth = 32;
+            this.variableDataGridView.RowTemplate.DefaultCellStyle.NullValue = null;
+            this.variableDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.variableDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.variableDataGridView.RowTemplate.Height = 33;
+            this.variableDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.variableDataGridView.Size = new System.Drawing.Size(968, 783);
+            this.variableDataGridView.TabIndex = 1;
             // 
             // typeColumn
             // 
@@ -237,7 +242,7 @@ namespace ConfigEditor
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variableDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +263,7 @@ namespace ConfigEditor
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox findTextBox;
         private System.Windows.Forms.Button findButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView variableDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valueColumn;

@@ -39,6 +39,11 @@ namespace ConfigEditor
                 fileName = openFileDialog.FileName;
                 //MessageBox.Show("Open " + filePath);
                 file.readFile(fileName);
+                foreach (var v in file.variableList)
+                {
+                    string[] row = { v.type, v.name, v.value };
+                    variableDataGridView.Rows.Add(row);
+                }
             }
         }
 
@@ -54,7 +59,9 @@ namespace ConfigEditor
             {
                 fileName = saveFileDialog.FileName;
                 //MessageBox.Show("Save to " + fileName);
+                updateFile();
                 file.saveFile(fileName);
+                //saveAsToolStripMenuItem_Click(sender, e);
             }
         }
 
@@ -65,8 +72,22 @@ namespace ConfigEditor
                 saveAsToolStripMenuItem_Click(sender, e);
                 return;
             }
-
+            updateFile();
             file.saveFile(fileName);
+        }
+
+        private void updateFile()
+        {
+            file.ClearList();
+            for (int i = 0; i < variableDataGridView.Rows.Count; i++)
+            {
+                if (variableDataGridView.Rows[i].Cells[0].Value!=null && variableDataGridView.Rows[i].Cells[0].Value!=null && variableDataGridView.Rows[i].Cells[2].Value!=null)
+                {
+                    file.insertNewVariable(variableDataGridView.Rows[i].Cells[0].Value.ToString(),
+                                           variableDataGridView.Rows[i].Cells[1].Value.ToString(),
+                                           variableDataGridView.Rows[i].Cells[2].Value.ToString());
+                }
+            }
         }
     }
 }

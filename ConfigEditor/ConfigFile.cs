@@ -68,5 +68,9 @@ namespace ConfigEditor
             sr.Close();
         }
 
+        public void ClearList()
+        {
+            variableList.Clear();
+        }
     }
 }
