@@ -26,7 +26,6 @@ namespace ConfigEditor
         {
             get;
         }
-
     }
     class ConfigFile
     {
@@ -38,7 +37,6 @@ namespace ConfigEditor
         {
             variableList.Add(new Variable(type, name, value));
         }
-
         public void readFile(string fileName)
         {
             variableList.Clear();

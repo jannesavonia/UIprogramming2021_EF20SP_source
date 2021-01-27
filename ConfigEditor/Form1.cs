@@ -56,7 +56,6 @@ namespace ConfigEditor
                 //MessageBox.Show("Save to " + fileName);
                 file.saveFile(fileName);
             }
-
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
