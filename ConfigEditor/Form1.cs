@@ -19,7 +19,11 @@ namespace ConfigEditor
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Configuration file editor 0.0");
+            MessageBox.Show(this,
+                            "Configuration file editor 0.0\nExample final project", 
+                            "About",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
         }
 
         private string fileType= "Text files (*.txt)|*.txt|All files (*.*)|*.*";
