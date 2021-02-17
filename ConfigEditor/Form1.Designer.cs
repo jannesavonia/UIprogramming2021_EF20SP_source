@@ -48,6 +48,8 @@ namespace ConfigEditor
             this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configureToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -75,11 +77,12 @@ namespace ConfigEditor
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
             this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.configureToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(974, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(974, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,7 +93,7 @@ namespace ConfigEditor
             this.saveAsToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 38);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
@@ -118,7 +121,7 @@ namespace ConfigEditor
             // 
             this.aboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 38);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 36);
             this.aboutToolStripMenuItem.Text = "About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -129,12 +132,12 @@ namespace ConfigEditor
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.variableDataGridView, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 42);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 887);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 889);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -163,7 +166,7 @@ namespace ConfigEditor
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 32);
+            this.label1.Size = new System.Drawing.Size(194, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Find:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -173,7 +176,7 @@ namespace ConfigEditor
             this.findTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.findTextBox.Location = new System.Drawing.Point(203, 3);
             this.findTextBox.Name = "findTextBox";
-            this.findTextBox.Size = new System.Drawing.Size(760, 31);
+            this.findTextBox.Size = new System.Drawing.Size(762, 31);
             this.findTextBox.TabIndex = 1;
             // 
             // findButton
@@ -181,12 +184,13 @@ namespace ConfigEditor
             this.findButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.findButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.findButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.findButton.Location = new System.Drawing.Point(203, 35);
+            this.findButton.Location = new System.Drawing.Point(203, 43);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(760, 40);
+            this.findButton.Size = new System.Drawing.Size(762, 48);
             this.findButton.TabIndex = 2;
             this.findButton.Text = "Find";
             this.findButton.UseVisualStyleBackColor = false;
+            this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
             // variableDataGridView
             // 
@@ -208,7 +212,7 @@ namespace ConfigEditor
             this.variableDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.variableDataGridView.RowTemplate.Height = 33;
             this.variableDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.variableDataGridView.Size = new System.Drawing.Size(968, 781);
+            this.variableDataGridView.Size = new System.Drawing.Size(968, 783);
             this.variableDataGridView.TabIndex = 1;
             // 
             // typeColumn
@@ -233,6 +237,21 @@ namespace ConfigEditor
             this.valueColumn.HeaderText = "value";
             this.valueColumn.MinimumWidth = 100;
             this.valueColumn.Name = "valueColumn";
+            // 
+            // configureToolStripMenuItem
+            // 
+            this.configureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configureToolStripMenuItem1});
+            this.configureToolStripMenuItem.Name = "configureToolStripMenuItem";
+            this.configureToolStripMenuItem.Size = new System.Drawing.Size(142, 36);
+            this.configureToolStripMenuItem.Text = "Properties";
+            // 
+            // configureToolStripMenuItem1
+            // 
+            this.configureToolStripMenuItem1.Name = "configureToolStripMenuItem1";
+            this.configureToolStripMenuItem1.Size = new System.Drawing.Size(359, 44);
+            this.configureToolStripMenuItem1.Text = "Configure";
+            this.configureToolStripMenuItem1.Click += new System.EventHandler(this.configureToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -277,6 +296,8 @@ namespace ConfigEditor
         private System.Windows.Forms.DataGridViewTextBoxColumn typeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valueColumn;
+        private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem1;
     }
 }
 

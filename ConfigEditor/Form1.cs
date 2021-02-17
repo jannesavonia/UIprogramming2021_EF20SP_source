@@ -93,5 +93,16 @@ namespace ConfigEditor
                 }
             }
         }
+
+        private void configureToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConfigForm configForm = new ConfigForm();
+            configForm.ShowDialog();
+        }
+
+        private void findButton_Click(object sender, EventArgs e)
+        {
+            //Not implemented yet
+        }
     }
 }

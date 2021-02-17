@@ -57,5 +57,15 @@ namespace TicTacToe
 ;            }
             this.Text = $"{turn} plays";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (var b in btnList)
+            {
+                b.Text = "";
+            }
+            turn = "X";
+            this.Text = $"{turn} plays";
+        }
     }
 }

@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigEditor", "ConfigEditor\ConfigEditor.csproj", "{46BB2FBD-7390-44EE-B2A1-79814C51E455}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureViewer\PictureViewer.csproj", "{44023BB9-26B0-4B50-B5F3-9673FCA0787E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedMathQuiz", "TimedMathQuiz\TimedMathQuiz.csproj", "{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{46BB2FBD-7390-44EE-B2A1-79814C51E455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46BB2FBD-7390-44EE-B2A1-79814C51E455}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46BB2FBD-7390-44EE-B2A1-79814C51E455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44023BB9-26B0-4B50-B5F3-9673FCA0787E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44023BB9-26B0-4B50-B5F3-9673FCA0787E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44023BB9-26B0-4B50-B5F3-9673FCA0787E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44023BB9-26B0-4B50-B5F3-9673FCA0787E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
