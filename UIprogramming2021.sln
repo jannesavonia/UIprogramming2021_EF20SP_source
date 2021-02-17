@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureVie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedMathQuiz", "TimedMathQuiz\TimedMathQuiz.csproj", "{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingGame", "MatchingGame\MatchingGame.csproj", "{54CAE875-FCBF-49E4-ADE1-AFB371B60F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A839BE6B-D57C-4EC8-8BFD-BF334FBE13AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54CAE875-FCBF-49E4-ADE1-AFB371B60F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54CAE875-FCBF-49E4-ADE1-AFB371B60F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54CAE875-FCBF-49E4-ADE1-AFB371B60F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54CAE875-FCBF-49E4-ADE1-AFB371B60F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
