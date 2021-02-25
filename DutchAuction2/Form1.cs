@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace DutchAuction
+namespace DutchAuction2
 {
     public partial class Form1 : Form
     {
@@ -18,16 +18,29 @@ namespace DutchAuction
         private double currentPrice;
         private const string ItemsFile = "../../Items.txt";
         private List<AuctionItem> itemList = new List<AuctionItem>();
-        //private int itemNumber=-1;
         public Form1()
         {
-            var items=File.ReadAllLines(ItemsFile);
-            foreach(var item in items)
+            var items = File.ReadAllLines(ItemsFile);
+            foreach (var item in items)
             {
                 itemList.Add(new AuctionItem(item));
             }
             InitializeComponent();
             NextItem();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            currentPrice -= startPrice * 0.01;
+            priceLabel.Text = PriceString();
+            if (currentPrice < reservePrice)
+            {
+                timer1.Stop();
+                startButton.Enabled = false;
+                bidButton.Enabled = false;
+                nextButton.Enabled = (itemList.Count != 0);
+                priceLabel.Text = "";
+            }
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -55,6 +68,7 @@ namespace DutchAuction
             bidButton.Enabled = false;
             nextButton.Enabled = (itemList.Count != 0);
         }
+
         private void NextItem()
         {
             //itemNumber++;
@@ -72,26 +86,12 @@ namespace DutchAuction
                 itemInfoTextBox.AppendText(Environment.NewLine);
                 itemInfoTextBox.AppendText(it.description + Environment.NewLine);
             }
-            nextButton.Enabled = (itemList.Count!=0);
+            nextButton.Enabled = (itemList.Count != 0);
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
             NextItem();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            currentPrice -= startPrice * 0.01;
-            priceLabel.Text = PriceString();
-            if(currentPrice<reservePrice)
-            {
-                timer1.Stop();
-                startButton.Enabled = false;
-                bidButton.Enabled = false;
-                nextButton.Enabled = (itemList.Count != 0);
-                priceLabel.Text = "";
-            }
         }
     }
 }
