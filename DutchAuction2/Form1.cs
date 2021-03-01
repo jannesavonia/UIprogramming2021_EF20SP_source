@@ -16,7 +16,9 @@ namespace DutchAuction2
         private double startPrice;
         private double reservePrice;
         private double currentPrice;
+        private string itemName;
         private const string ItemsFile = "../../Items.txt";
+        private const string BidsFile = "../../Bids.txt";
         private List<AuctionItem> itemList = new List<AuctionItem>();
         public Form1()
         {
@@ -67,6 +69,8 @@ namespace DutchAuction2
             startButton.Enabled = false;
             bidButton.Enabled = false;
             nextButton.Enabled = (itemList.Count != 0);
+            File.AppendAllText(BidsFile, name+": "+PriceString()+": "+
+                itemName+Environment.NewLine);
         }
 
         private void NextItem()
@@ -82,6 +86,7 @@ namespace DutchAuction2
                 itemList.RemoveAt(0);
                 startPrice = it.startPrice;
                 reservePrice = it.reservePrice;
+                itemName = it.name;
                 itemInfoTextBox.AppendText(it.name + Environment.NewLine);
                 itemInfoTextBox.AppendText(Environment.NewLine);
                 itemInfoTextBox.AppendText(it.description + Environment.NewLine);
