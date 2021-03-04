@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingGame", "MatchingGam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DutchAuction2", "DutchAuction2\DutchAuction2.csproj", "{B4F5AC66-A060-4ABC-8E23-454A23D1C0AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabExample", "TabExample\TabExample.csproj", "{F1AF4E4A-86CA-4C41-AC67-F694E8510AD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{B4F5AC66-A060-4ABC-8E23-454A23D1C0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F5AC66-A060-4ABC-8E23-454A23D1C0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F5AC66-A060-4ABC-8E23-454A23D1C0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1AF4E4A-86CA-4C41-AC67-F694E8510AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AF4E4A-86CA-4C41-AC67-F694E8510AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AF4E4A-86CA-4C41-AC67-F694E8510AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AF4E4A-86CA-4C41-AC67-F694E8510AD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
