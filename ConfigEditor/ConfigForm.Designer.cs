@@ -29,24 +29,46 @@ namespace ConfigEditor
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.codeLabel = new System.Windows.Forms.Label();
+            this.codeTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.registerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // codeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 178);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "To be implemented";
+            this.codeLabel.AutoSize = true;
+            this.codeLabel.Location = new System.Drawing.Point(16, 333);
+            this.codeLabel.Name = "codeLabel";
+            this.codeLabel.Size = new System.Drawing.Size(190, 25);
+            this.codeLabel.TabIndex = 0;
+            this.codeLabel.Text = "Registration Code:";
+            // 
+            // codeTextBox
+            // 
+            this.codeTextBox.Location = new System.Drawing.Point(21, 361);
+            this.codeTextBox.Mask = "0000-0000-0000-0000";
+            this.codeTextBox.Name = "codeTextBox";
+            this.codeTextBox.Size = new System.Drawing.Size(238, 31);
+            this.codeTextBox.TabIndex = 1;
+            // 
+            // registerButton
+            // 
+            this.registerButton.Location = new System.Drawing.Point(21, 399);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(238, 37);
+            this.registerButton.TabIndex = 2;
+            this.registerButton.Text = "Submit";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.registerButton);
+            this.Controls.Add(this.codeTextBox);
+            this.Controls.Add(this.codeLabel);
             this.Name = "ConfigForm";
             this.Text = "Configuration";
             this.ResumeLayout(false);
@@ -56,6 +78,8 @@ namespace ConfigEditor
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label codeLabel;
+        private System.Windows.Forms.MaskedTextBox codeTextBox;
+        private System.Windows.Forms.Button registerButton;
     }
 }

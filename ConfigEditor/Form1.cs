@@ -20,7 +20,7 @@ namespace ConfigEditor
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(this,
-                            "Configuration file editor 0.0\nExample final project", 
+                            "Configuration file editor 0.0\nExample project", 
                             "About",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -43,6 +43,7 @@ namespace ConfigEditor
                 fileName = openFileDialog.FileName;
                 //MessageBox.Show("Open " + filePath);
                 file.readFile(fileName);
+                variableDataGridView.Rows.Clear();
                 foreach (var v in file.variableList)
                 {
                     string[] row = { v.type, v.name, v.value };
@@ -98,11 +99,40 @@ namespace ConfigEditor
         {
             ConfigForm configForm = new ConfigForm();
             configForm.ShowDialog();
+            if(ConfigForm.registered)
+            {
+                Text = "Registered";
+            }
         }
 
+        private bool inFindMode=false;
         private void findButton_Click(object sender, EventArgs e)
         {
-            //Not implemented yet
+            var textToFind = findTextBox.Text;
+
+            inFindMode = (textToFind != "");
+            variableDataGridView.Rows.Clear();
+            foreach (var v in file.variableList)
+            {
+                string[] row = { v.type, v.name, v.value };
+                foreach (var s in row)
+                {
+                    if (s.Contains(textToFind))
+                    {
+                        variableDataGridView.Rows.Add(row);
+                        break;
+                    }
+                }
+            }
+            variableDataGridView.ReadOnly = inFindMode;
+        }
+
+        private void variableDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!inFindMode)
+            {
+                updateFile();
+            }
         }
     }
 }

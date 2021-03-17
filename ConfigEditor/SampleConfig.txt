@@ -1,8 +1,8 @@
-﻿int NumberVariable=1
+int NumberVariable=1
 string StringVariable=String can contain spaces
 bool BooleanVariable=true
-string AnotherStringVariable = Space on both sides of equality
-real AnotherNumberVariable =3.14159265
-int IntegerCanBeNegative = -999
-
-string Message = Empty line before and at end of file
+string AnotherStringVariable=Space on both sides of equality
+real AnotherNumberVariable=3.14159265
+int IntegerCanBeNegative=-999
+string Message=Empty line before and at end of file
+bool YetAnotherBoolean=false
