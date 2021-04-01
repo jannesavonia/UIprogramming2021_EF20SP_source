@@ -40,6 +40,9 @@ namespace ConfigEditor
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                findTextBox.Text = "";
+                inFindMode = false;
+
                 fileName = openFileDialog.FileName;
                 //MessageBox.Show("Open " + filePath);
                 file.readFile(fileName);
@@ -133,6 +136,11 @@ namespace ConfigEditor
             {
                 updateFile();
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
