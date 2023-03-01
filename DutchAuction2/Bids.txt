@@ -1,2 +1,4 @@
 eka: 1217.70 €: Lamp from France
 toka: 49.00 €: 2€ coin
+jpk: 1217.70 €: Lamp from France
+foo: 49.50 €: 2€ coin
